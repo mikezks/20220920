@@ -3,6 +3,10 @@ import {FlightService} from '@flight-workspace/flight-lib';
 
 @Component({
   selector: 'flight-search',
+  /* standalone: true,
+  imports: [
+
+  ], */
   templateUrl: './flight-search.component.html',
   styleUrls: ['./flight-search.component.css']
 })
