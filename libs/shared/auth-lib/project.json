@@ -1,29 +1,29 @@
 {
   "projectType": "library",
-  "sourceRoot": "libs/dashboard-lib/src",
+  "sourceRoot": "libs/shared/auth-lib/src",
   "prefix": "flight-workspace",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/dashboard-lib"],
+      "outputs": ["dist/libs/shared/auth-lib"],
       "options": {
-        "project": "libs/dashboard-lib/ng-package.json"
+        "project": "libs/shared/auth-lib/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/dashboard-lib/tsconfig.lib.prod.json"
+          "tsConfig": "libs/shared/auth-lib/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/dashboard-lib/tsconfig.lib.json"
+          "tsConfig": "libs/shared/auth-lib/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/dashboard-lib"],
+      "outputs": ["coverage/libs/shared/auth-lib"],
       "options": {
-        "jestConfig": "libs/dashboard-lib/jest.config.ts",
+        "jestConfig": "libs/shared/auth-lib/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -31,11 +31,11 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/dashboard-lib/src/**/*.ts",
-          "libs/dashboard-lib/src/**/*.html"
+          "libs/shared/auth-lib/**/*.ts",
+          "libs/shared/auth-lib/**/*.html"
         ]
       }
     }
   },
-  "tags": ["type:feature", "domain:dashboard"]
+  "tags": ["domain:shared", "type:util"]
 }
