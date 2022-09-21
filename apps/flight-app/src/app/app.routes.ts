@@ -22,12 +22,12 @@ export const APP_ROUTES: Routes = [
     path: 'flight',
     loadChildren: () => import('./flight-booking/flight-booking.routes')
       .then(esm => esm.FLIGHT_BOOKING_ROUTES)
-  },
-  {
-    path: 'flight/search',
-    loadComponent: () => import('./flight-booking/flight-search/flight-search.component')
-      .then(esm => esm.FlightSearchComponent)
   }, */
+  {
+    path: 'about',
+    loadComponent: () => import('./about/about.component')
+      .then(esm => esm.AboutComponent)
+  },
   {
     path: 'basket',
     component: BasketComponent,

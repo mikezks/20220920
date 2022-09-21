@@ -6,6 +6,7 @@ module.exports = withModuleFederationPlugin({
 
   exposes: {
     './module': './apps/passenger/src/app/passenger/passenger.module.ts',
+    './title-component': './apps/passenger/src/app/title/title.component.ts',
   },
 
   shared: {
